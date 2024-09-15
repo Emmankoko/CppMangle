@@ -3,7 +3,6 @@
 #include <iostream>
 #include <fstream>
 
-void emitSymbol();
 void writeToCppFile();
 void setInstantiate(std::ofstream &);
 void listInstantiate(std::ofstream &);
@@ -47,19 +46,8 @@ int main(int argc, char** argv)
         }
     }
 
-    emitSymbol();
+    writeToCppFile();
     return 0;
-}
-
-void emitSymbol()
-{
-    std::cout << class_name << std::endl;
-    std::cout << struct_name << std::endl;
-    std::cout << listflag << std::endl;
-    std::cout << vectorflag << std:: endl;
-    std::cout << setflag << std::endl;
-    std::cout << _class << std::endl;
-    std::cout << _struct << std::endl;
 }
 
 void writeToCppFile()
